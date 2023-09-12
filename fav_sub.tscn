@@ -1,0 +1,62 @@
+[gd_scene load_steps=3 format=3 uid="uid://kd0v3g634uqi"]
+
+[ext_resource type="Script" path="res://fav_sub.gd" id="1_nlbhm"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_wflsx"]
+font_size = 75
+
+[node name="fav_sub" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -64.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_nlbhm")
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_right = 614.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="btn show" type="Button" parent="."]
+layout_mode = 0
+offset_left = 209.0
+offset_top = 290.0
+offset_right = 358.0
+offset_bottom = 578.0
+text = "show"
+
+[node name="brn clear" type="Button" parent="."]
+layout_mode = 0
+offset_left = 468.0
+offset_top = 290.0
+offset_right = 617.0
+offset_bottom = 578.0
+text = "clear"
+
+[node name="btn exit" type="Button" parent="."]
+layout_mode = 0
+offset_left = 776.0
+offset_top = 292.0
+offset_right = 925.0
+offset_bottom = 580.0
+text = "exit"
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.066
+anchor_bottom = 1.0
+offset_right = -6.80811
+offset_bottom = -371.0
+label_settings = SubResource("LabelSettings_wflsx")
+
+[connection signal="pressed" from="btn show" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="brn clear" to="." method="_on_brn_clear_pressed"]
+[connection signal="pressed" from="btn exit" to="." method="_on_btn_exit_pressed"]

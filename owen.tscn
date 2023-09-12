@@ -1,0 +1,65 @@
+[gd_scene load_steps=4 format=3 uid="uid://cscb45yjjxa4w"]
+
+[ext_resource type="Script" path="res://Fav Club.gd" id="1_7v4gi"]
+[ext_resource type="Script" path="res://Btn now show.gd" id="2_6u42c"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_xp8yr"]
+font_size = 50
+
+[node name="Fav Club" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_7v4gi")
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 152.0
+offset_top = 64.0
+offset_right = -183.0
+offset_bottom = -378.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "__
+"
+label_settings = SubResource("LabelSettings_xp8yr")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="btn show" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 240.0
+offset_top = 341.0
+offset_right = -629.0
+offset_bottom = -86.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "show
+"
+
+[node name="Btn now show" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 579.0
+offset_top = 341.0
+offset_right = -277.0
+offset_bottom = -86.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "no show
+"
+script = ExtResource("2_6u42c")
+
+[connection signal="pressed" from="btn show" to="." method="_on_btn_show_pressed"]
+[connection signal="pressed" from="Btn now show" to="." method="_on_btn_now_show_pressed"]
