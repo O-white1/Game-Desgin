@@ -1,0 +1,91 @@
+[gd_scene load_steps=4 format=3 uid="uid://h337uelgw684"]
+
+[ext_resource type="Script" path="res://prog88a.gd" id="1_jl6hw"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_ebf2v"]
+font_size = 50
+
+[sub_resource type="LabelSettings" id="LabelSettings_c7tdc"]
+font_size = 40
+
+[node name="prog_88a" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_jl6hw")
+
+[node name="lbl_num1" type="Label" parent="."]
+layout_mode = 0
+offset_right = 465.0
+offset_bottom = 176.0
+text = "Enter num 1:"
+label_settings = SubResource("LabelSettings_ebf2v")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="lbl_num2" type="Label" parent="."]
+layout_mode = 0
+offset_top = 178.0
+offset_right = 465.0
+offset_bottom = 354.0
+text = "Enter num 2:
+"
+label_settings = SubResource("LabelSettings_ebf2v")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="enter_num1" type="LineEdit" parent="."]
+layout_mode = 0
+offset_left = 540.0
+offset_right = 1137.0
+offset_bottom = 171.0
+
+[node name="enter_num2" type="LineEdit" parent="."]
+layout_mode = 0
+offset_left = 540.0
+offset_top = 194.0
+offset_right = 1137.0
+offset_bottom = 365.0
+
+[node name="output" type="Label" parent="."]
+layout_mode = 0
+offset_top = 365.0
+offset_right = 544.0
+offset_bottom = 646.0
+label_settings = SubResource("LabelSettings_c7tdc")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="btn_calc" type="Button" parent="."]
+layout_mode = 0
+offset_left = 543.0
+offset_top = 394.0
+offset_right = 713.0
+offset_bottom = 631.0
+text = "Calculate
+"
+
+[node name="btn_clear" type="Button" parent="."]
+layout_mode = 0
+offset_left = 749.0
+offset_top = 394.0
+offset_right = 919.0
+offset_bottom = 631.0
+text = "Clear
+"
+
+[node name="btn_exit" type="Button" parent="."]
+layout_mode = 0
+offset_left = 952.0
+offset_top = 391.0
+offset_right = 1122.0
+offset_bottom = 628.0
+text = "Exit
+"
+
+[connection signal="pressed" from="btn_calc" to="." method="_on_btn_calc_pressed"]
+[connection signal="pressed" from="btn_clear" to="." method="_on_btn_clear_pressed"]
+[connection signal="pressed" from="btn_exit" to="." method="_on_btn_exit_pressed"]
