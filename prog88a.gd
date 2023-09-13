@@ -12,8 +12,8 @@ func _process(delta):
 
 
 func _on_btn_calc_pressed():
-	var num1 = int($lbl_num1.text)
-	var num2 = int($lbl_num2.text)
+	var num1 = int($enter_num1.text)
+	var num2 = int($enter_num2.text)
 	var Sum = num1 + num2
 	var Diff = num1 - num2
 	var Abs = abs(Diff)
@@ -38,9 +38,11 @@ func _on_btn_calc_pressed():
 
 
 func _on_btn_clear_pressed():
-	pass
+	$enter_num1.text = ""
+	$enter_num2.text = ""
+	$output.text = ""
 	
 
 
 func _on_btn_exit_pressed():
-	pass
+	get_tree().quit()
