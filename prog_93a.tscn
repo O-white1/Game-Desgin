@@ -1,0 +1,208 @@
+[gd_scene load_steps=6 format=3 uid="uid://bs6rmsthfxt1i"]
+
+[ext_resource type="Script" path="res://prog_93a.gd" id="1_yhgjv"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_nrula"]
+font_size = 50
+
+[sub_resource type="LabelSettings" id="LabelSettings_g52bg"]
+font_size = 40
+
+[sub_resource type="LabelSettings" id="LabelSettings_crlhf"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_efnye"]
+font_size = 20
+
+[node name="prog_93a" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_yhgjv")
+
+[node name="txt_killowats" type="LineEdit" parent="."]
+layout_mode = 0
+offset_left = 607.0
+offset_top = -3.0
+offset_right = 1029.0
+offset_bottom = 106.0
+
+[node name="lbl_killowats" type="Label" parent="."]
+layout_mode = 0
+offset_left = 5.0
+offset_right = 410.0
+offset_bottom = 114.0
+text = "Killowats used:"
+label_settings = SubResource("LabelSettings_nrula")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="lbl_baserate" type="Label" parent="."]
+layout_mode = 0
+offset_left = -5.0
+offset_top = 121.0
+offset_right = 411.0
+offset_bottom = 265.0
+text = "Base Rate:"
+label_settings = SubResource("LabelSettings_g52bg")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="lbl_baseratenumber" type="Label" parent="."]
+layout_mode = 0
+offset_left = 661.0
+offset_top = 153.0
+offset_right = 1042.0
+offset_bottom = 242.0
+label_settings = SubResource("LabelSettings_g52bg")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="lbl_surchargenumber" type="Label" parent="."]
+layout_mode = 0
+offset_left = 673.0
+offset_top = 269.0
+offset_right = 1054.0
+offset_bottom = 358.0
+label_settings = SubResource("LabelSettings_g52bg")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="lbl_citytaxnumber" type="Label" parent="."]
+layout_mode = 0
+offset_left = 668.0
+offset_top = 380.0
+offset_right = 1049.0
+offset_bottom = 469.0
+label_settings = SubResource("LabelSettings_g52bg")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="lbl_amt_owed" type="Label" parent="."]
+layout_mode = 0
+offset_left = -2.0
+offset_top = 577.0
+offset_right = 306.0
+offset_bottom = 666.0
+text = "Amount owed:"
+label_settings = SubResource("LabelSettings_g52bg")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="amt_owed" type="Label" parent="."]
+layout_mode = 0
+offset_left = 304.0
+offset_top = 599.0
+offset_right = 508.0
+offset_bottom = 648.0
+label_settings = SubResource("LabelSettings_crlhf")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="lbl_amt_owed_20th" type="Label" parent="."]
+layout_mode = 0
+offset_left = 561.0
+offset_top = 559.0
+offset_right = 811.0
+offset_bottom = 648.0
+text = "amt owed after may 20th:"
+label_settings = SubResource("LabelSettings_efnye")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="amt_owed2" type="Label" parent="."]
+layout_mode = 0
+offset_left = 851.0
+offset_top = 567.0
+offset_right = 1083.0
+offset_bottom = 643.0
+label_settings = SubResource("LabelSettings_crlhf")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="$" type="Label" parent="."]
+layout_mode = 0
+offset_left = 610.0
+offset_top = 138.0
+offset_right = 678.0
+offset_bottom = 244.0
+text = "$"
+label_settings = SubResource("LabelSettings_g52bg")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="$2" type="Label" parent="."]
+layout_mode = 0
+offset_left = 610.0
+offset_top = 253.0
+offset_right = 678.0
+offset_bottom = 359.0
+text = "$"
+label_settings = SubResource("LabelSettings_g52bg")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="$3" type="Label" parent="."]
+layout_mode = 0
+offset_left = 613.0
+offset_top = 365.0
+offset_right = 681.0
+offset_bottom = 471.0
+text = "$"
+label_settings = SubResource("LabelSettings_g52bg")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="lbl_surcharge" type="Label" parent="."]
+layout_mode = 0
+offset_left = 25.0
+offset_top = 236.0
+offset_right = 400.0
+offset_bottom = 380.0
+text = "Surcharge:"
+label_settings = SubResource("LabelSettings_g52bg")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="lbl_citytax" type="Label" parent="."]
+layout_mode = 0
+offset_left = 93.0
+offset_top = 327.0
+offset_right = 357.0
+offset_bottom = 471.0
+text = "City tax:"
+label_settings = SubResource("LabelSettings_g52bg")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="btn_calc" type="Button" parent="."]
+layout_mode = 0
+offset_left = 40.0
+offset_top = 469.0
+offset_right = 300.0
+offset_bottom = 574.0
+text = "Calculate
+"
+
+[node name="btn_clear" type="Button" parent="."]
+layout_mode = 0
+offset_left = 332.0
+offset_top = 466.0
+offset_right = 592.0
+offset_bottom = 571.0
+text = "Clear
+"
+
+[node name="btn_exit" type="Button" parent="."]
+layout_mode = 0
+offset_left = 632.0
+offset_top = 463.0
+offset_right = 892.0
+offset_bottom = 568.0
+text = "Exit
+"
+
+[connection signal="pressed" from="btn_calc" to="." method="_on_btn_calc_pressed"]
+[connection signal="pressed" from="btn_exit" to="." method="_on_btn_exit_pressed"]
