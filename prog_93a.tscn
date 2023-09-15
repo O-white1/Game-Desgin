@@ -12,7 +12,7 @@ font_size = 40
 font_size = 10
 
 [sub_resource type="LabelSettings" id="LabelSettings_efnye"]
-font_size = 20
+font_size = 30
 
 [node name="prog_93a" type="Control"]
 layout_mode = 3
@@ -33,60 +33,19 @@ offset_bottom = 106.0
 [node name="lbl_killowats" type="Label" parent="."]
 layout_mode = 0
 offset_left = 5.0
-offset_right = 410.0
+offset_right = 516.0
 offset_bottom = 114.0
 text = "Killowats used:"
 label_settings = SubResource("LabelSettings_nrula")
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="lbl_baserate" type="Label" parent="."]
-layout_mode = 0
-offset_left = -5.0
-offset_top = 121.0
-offset_right = 411.0
-offset_bottom = 265.0
-text = "Base Rate:"
-label_settings = SubResource("LabelSettings_g52bg")
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="lbl_baseratenumber" type="Label" parent="."]
-layout_mode = 0
-offset_left = 661.0
-offset_top = 153.0
-offset_right = 1042.0
-offset_bottom = 242.0
-label_settings = SubResource("LabelSettings_g52bg")
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="lbl_surchargenumber" type="Label" parent="."]
-layout_mode = 0
-offset_left = 673.0
-offset_top = 269.0
-offset_right = 1054.0
-offset_bottom = 358.0
-label_settings = SubResource("LabelSettings_g52bg")
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="lbl_citytaxnumber" type="Label" parent="."]
-layout_mode = 0
-offset_left = 668.0
-offset_top = 380.0
-offset_right = 1049.0
-offset_bottom = 469.0
-label_settings = SubResource("LabelSettings_g52bg")
-horizontal_alignment = 1
-vertical_alignment = 1
-
 [node name="lbl_amt_owed" type="Label" parent="."]
 layout_mode = 0
-offset_left = -2.0
-offset_top = 577.0
-offset_right = 306.0
-offset_bottom = 666.0
+offset_left = 315.0
+offset_top = 195.0
+offset_right = 623.0
+offset_bottom = 284.0
 text = "Amount owed:"
 label_settings = SubResource("LabelSettings_g52bg")
 horizontal_alignment = 1
@@ -94,20 +53,20 @@ vertical_alignment = 1
 
 [node name="amt_owed" type="Label" parent="."]
 layout_mode = 0
-offset_left = 304.0
-offset_top = 581.0
-offset_right = 553.0
-offset_bottom = 648.0
+offset_left = 643.0
+offset_top = 211.0
+offset_right = 1139.0
+offset_bottom = 300.0
 label_settings = SubResource("LabelSettings_crlhf")
 horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="lbl_amt_owed_20th" type="Label" parent="."]
 layout_mode = 0
-offset_left = 561.0
-offset_top = 559.0
-offset_right = 811.0
-offset_bottom = 648.0
+offset_left = 294.0
+offset_top = 366.0
+offset_right = 668.0
+offset_bottom = 489.0
 text = "amt owed after may 20th:"
 label_settings = SubResource("LabelSettings_efnye")
 horizontal_alignment = 1
@@ -115,93 +74,38 @@ vertical_alignment = 1
 
 [node name="amt_owed2" type="Label" parent="."]
 layout_mode = 0
-offset_left = 851.0
-offset_top = 567.0
-offset_right = 1083.0
-offset_bottom = 643.0
+offset_left = 701.0
+offset_top = 374.0
+offset_right = 1115.0
+offset_bottom = 486.0
 label_settings = SubResource("LabelSettings_crlhf")
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="$" type="Label" parent="."]
-layout_mode = 0
-offset_left = 610.0
-offset_top = 138.0
-offset_right = 678.0
-offset_bottom = 244.0
-text = "$"
-label_settings = SubResource("LabelSettings_g52bg")
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="$2" type="Label" parent="."]
-layout_mode = 0
-offset_left = 610.0
-offset_top = 253.0
-offset_right = 678.0
-offset_bottom = 359.0
-text = "$"
-label_settings = SubResource("LabelSettings_g52bg")
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="$3" type="Label" parent="."]
-layout_mode = 0
-offset_left = 613.0
-offset_top = 365.0
-offset_right = 681.0
-offset_bottom = 471.0
-text = "$"
-label_settings = SubResource("LabelSettings_g52bg")
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="lbl_surcharge" type="Label" parent="."]
-layout_mode = 0
-offset_left = 25.0
-offset_top = 236.0
-offset_right = 400.0
-offset_bottom = 380.0
-text = "Surcharge:"
-label_settings = SubResource("LabelSettings_g52bg")
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="lbl_citytax" type="Label" parent="."]
-layout_mode = 0
-offset_left = 93.0
-offset_top = 327.0
-offset_right = 357.0
-offset_bottom = 471.0
-text = "City tax:"
-label_settings = SubResource("LabelSettings_g52bg")
 horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="btn_calc" type="Button" parent="."]
 layout_mode = 0
-offset_left = 40.0
-offset_top = 469.0
-offset_right = 300.0
-offset_bottom = 574.0
+offset_left = 29.0
+offset_top = 128.0
+offset_right = 289.0
+offset_bottom = 233.0
 text = "Calculate
 "
 
 [node name="btn_clear" type="Button" parent="."]
 layout_mode = 0
-offset_left = 332.0
-offset_top = 466.0
-offset_right = 592.0
-offset_bottom = 571.0
+offset_left = 33.0
+offset_top = 248.0
+offset_right = 293.0
+offset_bottom = 353.0
 text = "Clear
 "
 
 [node name="btn_exit" type="Button" parent="."]
 layout_mode = 0
-offset_left = 632.0
-offset_top = 463.0
-offset_right = 892.0
-offset_bottom = 568.0
+offset_left = 37.0
+offset_top = 371.0
+offset_right = 297.0
+offset_bottom = 476.0
 text = "Exit
 "
 
