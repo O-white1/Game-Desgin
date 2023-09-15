@@ -16,6 +16,12 @@ func _on_btn_exit_pressed():
 
 
 func _on_btn_calc_pressed():
-	var killowats = ($txt_killowats)
-	var baserate = (killowats * 0.0475)
+	var killowats = float($txt_killowats.text)
+	var baserate = killowats * 0.0475
+	var surcharge = baserate * .1
+	var citytax = baserate * 0.3
+	var total = baserate + surcharge + citytax
+	$amt_owed.text = "baserate: $%.2f" %(baserate) + "surcharge: $%.2f" %(surcharge) + "citytax: $%.2f" %(citytax)
+	var lt = total * 1.04
+	
 	

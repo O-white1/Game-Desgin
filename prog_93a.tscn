@@ -9,6 +9,7 @@ font_size = 50
 font_size = 40
 
 [sub_resource type="LabelSettings" id="LabelSettings_crlhf"]
+font_size = 10
 
 [sub_resource type="LabelSettings" id="LabelSettings_efnye"]
 font_size = 20
@@ -94,8 +95,8 @@ vertical_alignment = 1
 [node name="amt_owed" type="Label" parent="."]
 layout_mode = 0
 offset_left = 304.0
-offset_top = 599.0
-offset_right = 508.0
+offset_top = 581.0
+offset_right = 553.0
 offset_bottom = 648.0
 label_settings = SubResource("LabelSettings_crlhf")
 horizontal_alignment = 1
