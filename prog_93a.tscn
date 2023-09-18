@@ -9,7 +9,7 @@ font_size = 50
 font_size = 40
 
 [sub_resource type="LabelSettings" id="LabelSettings_crlhf"]
-font_size = 10
+font_size = 15
 
 [sub_resource type="LabelSettings" id="LabelSettings_efnye"]
 font_size = 30
