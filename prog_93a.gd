@@ -23,7 +23,12 @@ func _on_btn_calc_pressed():
 	var total = baserate + surcharge + citytax
 	$amt_owed.text = "baserate: $%.2f" %(baserate) + "surcharge: $%.2f" %(surcharge) + "citytax: $%.2f" %(citytax)
 	var late_fee = total * 1.04
-	$amt_owed2.text = late_fee
+	$amt_owed2.text = "$" + str(late_fee)
 	
 	
-	
+
+
+func _on_btn_clear_pressed():
+	$amt_owed.text = ""
+	$amt_owed2.text = ""
+	$txt_killowats.text = ""
