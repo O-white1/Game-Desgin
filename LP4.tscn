@@ -1,0 +1,71 @@
+[gd_scene load_steps=4 format=3 uid="uid://bvc130q77h85h"]
+
+[ext_resource type="Script" path="res://LP4.gd" id="1_6x227"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_td6lq"]
+font_size = 50
+
+[sub_resource type="LabelSettings" id="LabelSettings_v3hva"]
+
+[node name="Eggs" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 2.0
+offset_bottom = 2.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_6x227")
+
+[node name="btn_exit" type="Button" parent="."]
+layout_mode = 0
+offset_left = 997.0
+offset_top = 518.0
+offset_right = 1142.0
+offset_bottom = 637.0
+text = "EXIT"
+
+[node name="btn_clear" type="Button" parent="."]
+layout_mode = 0
+offset_left = 842.0
+offset_top = 516.0
+offset_right = 987.0
+offset_bottom = 635.0
+text = "Clear"
+
+[node name="btn_calc" type="Button" parent="."]
+layout_mode = 0
+offset_left = 138.0
+offset_top = 511.0
+offset_right = 548.0
+offset_bottom = 628.0
+text = "Calculate"
+
+[node name="txteggs" type="LineEdit" parent="."]
+layout_mode = 0
+offset_left = 525.0
+offset_top = 24.0
+offset_right = 1041.0
+offset_bottom = 141.0
+
+[node name="lbl_num_eggs" type="Label" parent="."]
+layout_mode = 0
+offset_left = 97.0
+offset_top = 26.0
+offset_right = 496.0
+offset_bottom = 133.0
+text = "Number of eggs:"
+label_settings = SubResource("LabelSettings_td6lq")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="output" type="Label" parent="."]
+layout_mode = 0
+offset_left = 14.0
+offset_top = 159.0
+offset_right = 1096.0
+offset_bottom = 496.0
+label_settings = SubResource("LabelSettings_v3hva")
+
+[connection signal="pressed" from="btn_calc" to="." method="_on_btn_calc_pressed"]
