@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://bvc130q77h85h"]
 
-[ext_resource type="Script" path="res://LP4.gd" id="1_6x227"]
+[ext_resource type="Script" path="res://LP4-3.gd" id="1_p85so"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_td6lq"]
 font_size = 50
@@ -16,7 +16,7 @@ offset_top = 2.0
 offset_bottom = 2.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_6x227")
+script = ExtResource("1_p85so")
 
 [node name="btn_exit" type="Button" parent="."]
 layout_mode = 0
