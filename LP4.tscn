@@ -68,4 +68,6 @@ offset_right = 1096.0
 offset_bottom = 496.0
 label_settings = SubResource("LabelSettings_v3hva")
 
+[connection signal="pressed" from="btn_exit" to="." method="_on_btn_exit_pressed"]
+[connection signal="pressed" from="btn_clear" to="." method="_on_btn_clear_pressed"]
 [connection signal="pressed" from="btn_calc" to="." method="_on_btn_calc_pressed"]
