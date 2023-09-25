@@ -1,0 +1,68 @@
+[gd_scene load_steps=3 format=3 uid="uid://c58ib3vbbskwk"]
+
+[ext_resource type="Script" path="res://Prog_58b.gd" id="1_jkbal"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_xvont"]
+font_size = 20
+
+[node name="Prog_58b" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_jkbal")
+
+[node name="btn_calc" type="Button" parent="."]
+layout_mode = 0
+offset_left = 9.0
+offset_top = 535.0
+offset_right = 343.0
+offset_bottom = 627.0
+text = "Calculate"
+
+[node name="btn_clear" type="Button" parent="."]
+layout_mode = 0
+offset_left = 411.0
+offset_top = 535.0
+offset_right = 745.0
+offset_bottom = 627.0
+text = "Clear"
+
+[node name="btn_exit" type="Button" parent="."]
+layout_mode = 0
+offset_left = 806.0
+offset_top = 531.0
+offset_right = 1140.0
+offset_bottom = 623.0
+text = "Exit
+"
+
+[node name="txtA" type="LineEdit" parent="."]
+layout_mode = 0
+offset_right = 467.0
+offset_bottom = 107.0
+
+[node name="txtB" type="LineEdit" parent="."]
+layout_mode = 0
+offset_top = 131.0
+offset_right = 467.0
+offset_bottom = 238.0
+
+[node name="txtC" type="LineEdit" parent="."]
+layout_mode = 0
+offset_top = 267.0
+offset_right = 467.0
+offset_bottom = 374.0
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 635.0
+offset_right = 1146.0
+offset_bottom = 304.0
+label_settings = SubResource("LabelSettings_xvont")
+
+[connection signal="pressed" from="btn_calc" to="." method="_on_btn_calc_pressed"]
+[connection signal="pressed" from="btn_clear" to="." method="_on_btn_clear_pressed"]
+[connection signal="pressed" from="btn_exit" to="." method="_on_btn_exit_pressed"]
