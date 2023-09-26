@@ -1,0 +1,47 @@
+[gd_scene load_steps=2 format=3 uid="uid://dbui5b6swyop0"]
+
+[ext_resource type="Script" path="res://152aWhile.gd" id="1_g1k7n"]
+
+[node name="152aWhile" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_g1k7n")
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 0
+offset_left = 13.0
+offset_top = 499.0
+offset_right = 276.0
+offset_bottom = 628.0
+text = "calculate"
+
+[node name="Button3" type="Button" parent="."]
+layout_mode = 0
+offset_left = 435.0
+offset_top = 507.0
+offset_right = 698.0
+offset_bottom = 636.0
+text = "clear"
+
+[node name="Button2" type="Button" parent="."]
+layout_mode = 0
+offset_left = 873.0
+offset_top = 499.0
+offset_right = 1136.0
+offset_bottom = 628.0
+text = "exit."
+
+[node name="ItemList" type="ItemList" parent="."]
+layout_mode = 0
+offset_right = 41.0
+offset_bottom = 43.0
+rotation = -6.28142
+scale = Vector2(27.8453, 10.9506)
+allow_rmb_select = true
+allow_search = false
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
