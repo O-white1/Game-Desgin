@@ -19,3 +19,4 @@ func _on_btn_calc_pressed():
 	while lcv <= 9669:
 		Sum += lcv
 		$ItemList.add_item(str(Sum))
+		lcv +=3
