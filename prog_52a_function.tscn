@@ -1,0 +1,66 @@
+[gd_scene load_steps=2 format=3 uid="uid://d0ui7tjv5b7gr"]
+
+[ext_resource type="Script" path="res://prog_52aFunction.gd" id="1_alag2"]
+
+[node name="prog_52aFunction" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -8.0
+offset_top = 4.0
+offset_right = -8.0
+offset_bottom = 4.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_alag2")
+
+[node name="txtLen" type="LineEdit" parent="."]
+layout_mode = 0
+offset_left = 28.0
+offset_right = 418.0
+offset_bottom = 142.0
+
+[node name="txtWid" type="LineEdit" parent="."]
+layout_mode = 0
+offset_left = 32.0
+offset_top = 168.0
+offset_right = 426.0
+offset_bottom = 310.0
+
+[node name="btn_calc" type="Button" parent="."]
+layout_mode = 0
+offset_left = 49.0
+offset_top = 439.0
+offset_right = 377.0
+offset_bottom = 626.0
+text = "Calculate"
+
+[node name="btn_clear" type="Button" parent="."]
+layout_mode = 0
+offset_left = 405.0
+offset_top = 439.0
+offset_right = 733.0
+offset_bottom = 626.0
+text = "Clear"
+
+[node name="btn_exit" type="Button" parent="."]
+layout_mode = 0
+offset_left = 789.0
+offset_top = 435.0
+offset_right = 1117.0
+offset_bottom = 622.0
+text = "Exit
+"
+
+[node name="lbl_out" type="Label" parent="."]
+layout_mode = 0
+offset_left = 428.0
+offset_right = 1124.0
+offset_bottom = 343.0
+
+[connection signal="pressed" from="btn_calc" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="btn_clear" to="." method="_on_btn_clear_pressed"]
+[connection signal="pressed" from="btn_clear" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="btn_exit" to="." method="_on_btn_exit_pressed"]
+[connection signal="pressed" from="btn_exit" to="." method="_on_button_pressed"]
