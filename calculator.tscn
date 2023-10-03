@@ -1,0 +1,126 @@
+[gd_scene load_steps=3 format=3 uid="uid://i1t347a8577b"]
+
+[ext_resource type="Script" path="res://SimpleCalcFunc.gd" id="1_q1j6t"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_cpm44"]
+font_size = 50
+
+[node name="SimpleCalcFunc" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_q1j6t")
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 0
+offset_left = 441.0
+offset_top = 514.0
+offset_right = 686.0
+offset_bottom = 643.0
+text = "Clear
+"
+
+[node name="Button3" type="Button" parent="."]
+layout_mode = 0
+offset_left = 903.0
+offset_top = 519.0
+offset_right = 1148.0
+offset_bottom = 648.0
+text = "exit
+"
+
+[node name="Button2" type="Button" parent="."]
+layout_mode = 0
+offset_left = 3.0
+offset_top = 519.0
+offset_right = 248.0
+offset_bottom = 648.0
+text = "Caclulate
+"
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 38.0
+offset_top = 23.0
+offset_right = 448.0
+offset_bottom = 117.0
+text = "Enter Num 1:"
+label_settings = SubResource("LabelSettings_cpm44")
+
+[node name="output" type="Label" parent="."]
+layout_mode = 0
+offset_left = 576.0
+offset_top = 220.0
+offset_right = 1141.0
+offset_bottom = 506.0
+label_settings = SubResource("LabelSettings_cpm44")
+
+[node name="Label2" type="Label" parent="."]
+layout_mode = 0
+offset_left = 35.0
+offset_top = 131.0
+offset_right = 445.0
+offset_bottom = 225.0
+text = "Enter Num 2:"
+label_settings = SubResource("LabelSettings_cpm44")
+
+[node name="txt_num1" type="LineEdit" parent="."]
+layout_mode = 0
+offset_left = 436.0
+offset_top = 13.0
+offset_right = 1132.0
+offset_bottom = 94.0
+
+[node name="txt_num2" type="LineEdit" parent="."]
+layout_mode = 0
+offset_left = 433.0
+offset_top = 129.0
+offset_right = 1127.0
+offset_bottom = 210.0
+
+[node name="btn_add" type="Button" parent="."]
+layout_mode = 0
+offset_left = 25.0
+offset_top = 212.0
+offset_right = 181.0
+offset_bottom = 332.0
+text = "add
+"
+
+[node name="btn_sub" type="Button" parent="."]
+layout_mode = 0
+offset_left = 192.0
+offset_top = 213.0
+offset_right = 358.0
+offset_bottom = 333.0
+text = "subtract
+"
+
+[node name="btn_mul" type="Button" parent="."]
+layout_mode = 0
+offset_left = 193.0
+offset_top = 349.0
+offset_right = 361.0
+offset_bottom = 490.0
+text = "Multiply
+"
+
+[node name="btn_mul3" type="Button" parent="."]
+layout_mode = 0
+offset_left = 373.0
+offset_top = 215.0
+offset_right = 541.0
+offset_bottom = 488.0
+text = "mod."
+
+[node name="btn pow" type="Button" parent="."]
+layout_mode = 0
+offset_left = 25.0
+offset_top = 346.0
+offset_right = 178.0
+offset_bottom = 489.0
+text = "exponant
+"
