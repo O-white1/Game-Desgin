@@ -1,0 +1,57 @@
+[gd_scene load_steps=3 format=3 uid="uid://c2js5q1obooxt"]
+
+[ext_resource type="Script" path="res://Scoreboard.gd" id="1_k12dw"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_uoqda"]
+font_size = 50
+
+[node name="Scoreboard" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_k12dw")
+
+[node name="lblout" type="Label" parent="."]
+layout_mode = 0
+offset_right = 1130.0
+offset_bottom = 318.0
+
+[node name="mod_point" type="Label" parent="."]
+layout_mode = 0
+offset_left = 28.0
+offset_top = 402.0
+offset_right = 403.0
+offset_bottom = 499.0
+text = "Modify points:"
+label_settings = SubResource("LabelSettings_uoqda")
+
+[node name="LineEdit" type="LineEdit" parent="."]
+layout_mode = 0
+offset_left = 385.0
+offset_top = 391.0
+offset_right = 715.0
+offset_bottom = 493.0
+
+[node name="btn_update" type="Button" parent="."]
+layout_mode = 0
+offset_left = 25.0
+offset_top = 543.0
+offset_right = 327.0
+offset_bottom = 617.0
+text = "Update
+"
+
+[node name="btn_reset" type="Button" parent="."]
+layout_mode = 0
+offset_left = 823.0
+offset_top = 548.0
+offset_right = 1125.0
+offset_bottom = 622.0
+text = "Reset
+"
+
+[connection signal="pressed" from="btn_update" to="." method="_on_btn_update_pressed"]
+[connection signal="pressed" from="btn_reset" to="." method="_on_btn_reset_pressed"]
