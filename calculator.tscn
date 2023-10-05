@@ -10,6 +10,10 @@ layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_left = -5.0
+offset_top = -11.0
+offset_right = -5.0
+offset_bottom = -11.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_q1j6t")
@@ -104,8 +108,17 @@ layout_mode = 0
 offset_left = 373.0
 offset_top = 215.0
 offset_right = 541.0
-offset_bottom = 488.0
+offset_bottom = 337.0
 text = "mod."
+
+[node name="btn_div" type="Button" parent="."]
+layout_mode = 0
+offset_left = 373.0
+offset_top = 348.0
+offset_right = 541.0
+offset_bottom = 488.0
+text = "div
+"
 
 [node name="btn pow" type="Button" parent="."]
 layout_mode = 0
@@ -122,4 +135,5 @@ text = "exponant
 [connection signal="pressed" from="btn_sub" to="." method="_on_btn_sub_pressed"]
 [connection signal="pressed" from="btn_mul" to="." method="_on_btn_mul_pressed"]
 [connection signal="pressed" from="btn_mod" to="." method="_on_btn_mod_pressed"]
+[connection signal="pressed" from="btn_div" to="." method="_on_btn_div_pressed"]
 [connection signal="pressed" from="btn pow" to="." method="_on_btn_pow_pressed"]
