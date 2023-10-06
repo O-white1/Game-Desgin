@@ -1,0 +1,91 @@
+[gd_scene load_steps=5 format=3 uid="uid://b71jp0gg2y11a"]
+
+[ext_resource type="Script" path="res://prog_52a_func.gd" id="1_1t8as"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_f13wi"]
+font_size = 40
+
+[sub_resource type="LabelSettings" id="LabelSettings_8rjfr"]
+font_size = 40
+
+[sub_resource type="LabelSettings" id="LabelSettings_7am1m"]
+font_size = 50
+
+[node name="prog_52aFUNC" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_1t8as")
+
+[node name="txtnum1" type="LineEdit" parent="."]
+layout_mode = 0
+offset_left = 436.0
+offset_top = 13.0
+offset_right = 793.0
+offset_bottom = 110.0
+
+[node name="txtnum2" type="LineEdit" parent="."]
+layout_mode = 0
+offset_left = 436.0
+offset_top = 129.0
+offset_right = 793.0
+offset_bottom = 226.0
+
+[node name="insrt1" type="Label" parent="."]
+layout_mode = 0
+offset_left = 7.0
+offset_top = 15.0
+offset_right = 364.0
+offset_bottom = 104.0
+text = "Inset first number:"
+label_settings = SubResource("LabelSettings_f13wi")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="insrt2" type="Label" parent="."]
+layout_mode = 0
+offset_left = 5.0
+offset_top = 123.0
+offset_right = 437.0
+offset_bottom = 212.0
+text = "Insert second number:"
+label_settings = SubResource("LabelSettings_8rjfr")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="btn_calc" type="Button" parent="."]
+layout_mode = 0
+offset_left = 25.0
+offset_top = 532.0
+offset_right = 371.0
+offset_bottom = 643.0
+text = "Calculate"
+
+[node name="btn_exit" type="Button" parent="."]
+layout_mode = 0
+offset_left = 786.0
+offset_top = 532.0
+offset_right = 1132.0
+offset_bottom = 643.0
+text = "Exit"
+
+[node name="btn_clear" type="Button" parent="."]
+layout_mode = 0
+offset_left = 403.0
+offset_top = 534.0
+offset_right = 749.0
+offset_bottom = 645.0
+text = "Clear"
+
+[node name="output" type="Label" parent="."]
+layout_mode = 0
+offset_left = 15.0
+offset_top = 237.0
+offset_right = 756.0
+offset_bottom = 511.0
+label_settings = SubResource("LabelSettings_7am1m")
+
+[connection signal="pressed" from="btn_calc" to="." method="_on_btn_calc_pressed"]

@@ -20,3 +20,12 @@ func _on_btn_calc_pressed():
 		Sum += lcv
 		$ItemList.add_item(str(Sum))
 		lcv +=3
+
+
+func _on_btn_clear_pressed():
+	$ItemList.clear()
+	
+
+
+func _on_btn_exit_pressed():
+	get_tree().quit()
