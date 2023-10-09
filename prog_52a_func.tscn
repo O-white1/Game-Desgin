@@ -40,7 +40,7 @@ offset_left = 7.0
 offset_top = 15.0
 offset_right = 364.0
 offset_bottom = 104.0
-text = "Inset first number:"
+text = "insert width:"
 label_settings = SubResource("LabelSettings_f13wi")
 horizontal_alignment = 1
 vertical_alignment = 1
@@ -51,7 +51,7 @@ offset_left = 5.0
 offset_top = 123.0
 offset_right = 437.0
 offset_bottom = 212.0
-text = "Insert second number:"
+text = "insert length:"
 label_settings = SubResource("LabelSettings_8rjfr")
 horizontal_alignment = 1
 vertical_alignment = 1
@@ -89,3 +89,5 @@ offset_bottom = 511.0
 label_settings = SubResource("LabelSettings_7am1m")
 
 [connection signal="pressed" from="btn_calc" to="." method="_on_btn_calc_pressed"]
+[connection signal="pressed" from="btn_exit" to="." method="_on_btn_exit_pressed"]
+[connection signal="pressed" from="btn_clear" to="." method="_on_btn_clear_pressed"]

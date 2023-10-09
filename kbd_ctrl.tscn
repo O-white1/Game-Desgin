@@ -1,0 +1,33 @@
+[gd_scene load_steps=5 format=3 uid="uid://c3e7284yvmhye"]
+
+[ext_resource type="Script" path="res://kbd_ctrl.gd" id="1_ule7o"]
+[ext_resource type="PackedScene" uid="uid://btynvpllribrh" path="res://kbd_player.tscn" id="2_tq2u1"]
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_jlgm0"]
+b = Vector2(209, 0)
+
+[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_f05b1"]
+
+[node name="kbd_ctrl" type="Node2D"]
+script = ExtResource("1_ule7o")
+
+[node name="kbd_player" parent="." instance=ExtResource("2_tq2u1")]
+position = Vector2(82, 3)
+
+[node name="strt_plat" type="StaticBody2D" parent="."]
+position = Vector2(-1, 61)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="strt_plat"]
+shape = SubResource("SegmentShape2D_jlgm0")
+
+[node name="Sprite2D" type="Sprite2D" parent="strt_plat"]
+position = Vector2(104.75, 0.25)
+scale = Vector2(210.5, 1.5)
+texture = SubResource("PlaceholderTexture2D_f05b1")
+
+[node name="world" type="StaticBody2D" parent="."]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="world"]
+polygon = PackedVector2Array(25, 40, 39, 113, 52, 212, -1, 278, 56, 320, 116, 386, 188, 344, 362, 374, 434, 452, 721, 350, 883, 218, 1093, 296, 1423, 162, 1881, 450, 1381, 323, 2305, 128, 2355, 247, 2839, -177, 4890, -177, 5042, 781, 1210, 694, 530, 692, 320, 647, -96, 632, -210, 509, -225, 248, -281, -88, -52, -15)
+
+[node name="Polygon2D" type="Polygon2D" parent="world/CollisionPolygon2D"]

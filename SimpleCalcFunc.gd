@@ -8,11 +8,11 @@ func _on_btn_clear_pressed():
 	$txt_num1.text = ""
 	$txt_num2.text = ""
 	$output.text = ""
-	
+	$txt_num1.text = ""
+	$txt_num2.text = ""
+	$output.text = ""
 func _on_btn_exit_pressed():
-	get_tree().quit()
-	
-
+		get_tree().quit()
 
 func _on_btn_add_pressed():	
 	getnums()
