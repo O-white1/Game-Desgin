@@ -1,7 +1,8 @@
-[gd_scene load_steps=7 format=3 uid="uid://c3e7284yvmhye"]
+[gd_scene load_steps=8 format=3 uid="uid://c3e7284yvmhye"]
 
 [ext_resource type="Script" path="res://kbd_ctrl.gd" id="1_ule7o"]
 [ext_resource type="PackedScene" uid="uid://btynvpllribrh" path="res://kbd_player.tscn" id="2_tq2u1"]
+[ext_resource type="PackedScene" uid="uid://d0gdhmg3bpexj" path="res://kbd_enemy.tscn" id="3_6dn37"]
 
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_jlgm0"]
 b = Vector2(209, 0)
@@ -33,7 +34,8 @@ texture = SubResource("PlaceholderTexture2D_f05b1")
 [node name="world" type="StaticBody2D" parent="."]
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="world"]
-polygon = PackedVector2Array(25, 40, 39, 113, 52, 212, -1, 278, 56, 320, 116, 386, 188, 344, 362, 374, 434, 452, 613, 431, 845, 318, 987, 397, 1286, 329, 1422, 306, 1569, 125, 1897, -50, 2092, -5, 2523, -171, 3419, 289, 3171, 484, 1210, 694, 530, 692, 320, 647, -96, 632, -210, 509, -225, 248, -281, -88, -52, -15)
+position = Vector2(1, 0)
+polygon = PackedVector2Array(1, 61, 39, 113, 52, 212, -1, 278, 56, 320, 116, 386, 188, 344, 362, 374, 434, 452, 509, 443, 541, 477, 556, 519, 581, 572, 628, 591, 688, 572, 709, 503, 791, 382, 845, 318, 987, 397, 1286, 329, 1422, 306, 1569, 125, 1897, -50, 2092, -5, 2523, -171, 3419, 289, 3171, 484, 1210, 694, 530, 692, 320, 647, -96, 632, -210, 509, -225, 248, -281, -88, -80, 19)
 
 [node name="Polygon2D" type="Polygon2D" parent="world/CollisionPolygon2D"]
 
@@ -52,6 +54,7 @@ position = Vector2(0, 0.5)
 shape = SubResource("RectangleShape2D_ylont")
 
 [node name="draggable" type="RigidBody2D" parent="."]
+position = Vector2(240, -77)
 freeze = true
 
 [node name="Sprite2D" type="Sprite2D" parent="draggable"]
@@ -68,6 +71,10 @@ offset_top = -29.0
 offset_right = 32.0
 offset_bottom = 28.0
 focus_mode = 0
+metadata/_edit_use_anchors_ = true
+
+[node name="kbd_enemy" parent="." instance=ExtResource("3_6dn37")]
+position = Vector2(629, 549)
 
 [connection signal="mouse_entered" from="interact" to="." method="_on_interact_mouse_entered"]
 [connection signal="button_down" from="draggable/Button" to="." method="_on_button_button_down"]
