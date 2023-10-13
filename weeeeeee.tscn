@@ -1,0 +1,191 @@
+[gd_scene load_steps=3 format=3 uid="uid://bs0ipoqv7akh2"]
+
+[ext_resource type="PackedScene" uid="uid://d0gdhmg3bpexj" path="res://kbd_enemy.tscn" id="1_vgpkk"]
+[ext_resource type="PackedScene" uid="uid://deip2osryqcy3" path="res://plat.tscn" id="2_vx8lv"]
+
+[node name="weeeeeee" type="Node2D"]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="Polygon2D" type="Polygon2D" parent="StaticBody2D"]
+polygon = PackedVector2Array(163, 250, 471, 538, 922, 631, 1212, 434, 1436, 92, 1469, 470, 1091, 641, 746, 661, 310, 606)
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D"]
+polygon = PackedVector2Array(165, 251, 486, 543, 933, 639, 1232, 413, 1451, 77, 1514, 527, 987, 927, 343, 766, 114, 553)
+
+[node name="kbd_enemy" parent="." instance=ExtResource("1_vgpkk")]
+position = Vector2(768, 416)
+
+[node name="kbd_enemy2" parent="." instance=ExtResource("1_vgpkk")]
+position = Vector2(769, 500)
+
+[node name="kbd_enemy3" parent="." instance=ExtResource("1_vgpkk")]
+position = Vector2(879, 500)
+
+[node name="kbd_enemy4" parent="." instance=ExtResource("1_vgpkk")]
+position = Vector2(889, 448)
+
+[node name="kbd_enemy5" parent="." instance=ExtResource("1_vgpkk")]
+position = Vector2(844, 561)
+
+[node name="kbd_enemy6" parent="." instance=ExtResource("1_vgpkk")]
+position = Vector2(659, 494)
+
+[node name="kbd_enemy7" parent="." instance=ExtResource("1_vgpkk")]
+position = Vector2(745, 572)
+
+[node name="kbd_enemy8" parent="." instance=ExtResource("1_vgpkk")]
+position = Vector2(838, 452)
+
+[node name="kbd_enemy9" parent="." instance=ExtResource("1_vgpkk")]
+position = Vector2(1067, 442)
+
+[node name="kbd_enemy10" parent="." instance=ExtResource("1_vgpkk")]
+position = Vector2(991, 503)
+
+[node name="kbd_enemy11" parent="." instance=ExtResource("1_vgpkk")]
+position = Vector2(929, 421)
+
+[node name="kbd_enemy12" parent="." instance=ExtResource("1_vgpkk")]
+position = Vector2(1106, 367)
+
+[node name="kbd_enemy13" parent="." instance=ExtResource("1_vgpkk")]
+position = Vector2(1185, 347)
+
+[node name="kbd_enemy14" parent="." instance=ExtResource("1_vgpkk")]
+position = Vector2(1270, 305)
+
+[node name="kbd_enemy15" parent="." instance=ExtResource("1_vgpkk")]
+position = Vector2(1198, 387)
+
+[node name="kbd_enemy16" parent="." instance=ExtResource("1_vgpkk")]
+position = Vector2(1137, 427)
+
+[node name="kbd_enemy17" parent="." instance=ExtResource("1_vgpkk")]
+position = Vector2(1099, 479)
+
+[node name="kbd_enemy18" parent="." instance=ExtResource("1_vgpkk")]
+position = Vector2(930, 584)
+
+[node name="kbd_enemy19" parent="." instance=ExtResource("1_vgpkk")]
+position = Vector2(568, 524)
+
+[node name="kbd_enemy20" parent="." instance=ExtResource("1_vgpkk")]
+position = Vector2(513, 470)
+
+[node name="kbd_enemy21" parent="." instance=ExtResource("1_vgpkk")]
+position = Vector2(669, 401)
+
+[node name="kbd_enemy22" parent="." instance=ExtResource("1_vgpkk")]
+position = Vector2(635, 419)
+
+[node name="kbd_enemy23" parent="." instance=ExtResource("1_vgpkk")]
+position = Vector2(875, 394)
+
+[node name="kbd_enemy24" parent="." instance=ExtResource("1_vgpkk")]
+position = Vector2(988, 410)
+
+[node name="kbd_enemy25" parent="." instance=ExtResource("1_vgpkk")]
+position = Vector2(1036, 473)
+
+[node name="kbd_enemy26" parent="." instance=ExtResource("1_vgpkk")]
+position = Vector2(940, 527)
+
+[node name="kbd_enemy27" parent="." instance=ExtResource("1_vgpkk")]
+position = Vector2(817, 543)
+
+[node name="kbd_enemy28" parent="." instance=ExtResource("1_vgpkk")]
+position = Vector2(758, 353)
+
+[node name="kbd_enemy29" parent="." instance=ExtResource("1_vgpkk")]
+position = Vector2(967, 325)
+
+[node name="kbd_enemy30" parent="." instance=ExtResource("1_vgpkk")]
+position = Vector2(858, 315)
+
+[node name="kbd_enemy31" parent="." instance=ExtResource("1_vgpkk")]
+position = Vector2(642, 335)
+
+[node name="kbd_enemy32" parent="." instance=ExtResource("1_vgpkk")]
+position = Vector2(730, 291)
+
+[node name="kbd_enemy33" parent="." instance=ExtResource("1_vgpkk")]
+position = Vector2(823, 247)
+
+[node name="kbd_enemy34" parent="." instance=ExtResource("1_vgpkk")]
+position = Vector2(911, 257)
+
+[node name="kbd_enemy35" parent="." instance=ExtResource("1_vgpkk")]
+position = Vector2(1007, 292)
+
+[node name="kbd_enemy36" parent="." instance=ExtResource("1_vgpkk")]
+position = Vector2(1121, 200)
+
+[node name="kbd_enemy37" parent="." instance=ExtResource("1_vgpkk")]
+position = Vector2(1013, 220)
+
+[node name="kbd_enemy38" parent="." instance=ExtResource("1_vgpkk")]
+position = Vector2(917, 225)
+
+[node name="kbd_enemy39" parent="." instance=ExtResource("1_vgpkk")]
+position = Vector2(844, 210)
+
+[node name="kbd_enemy40" parent="." instance=ExtResource("1_vgpkk")]
+position = Vector2(922, 190)
+
+[node name="kbd_enemy41" parent="." instance=ExtResource("1_vgpkk")]
+position = Vector2(894, 170)
+
+[node name="kbd_enemy42" parent="." instance=ExtResource("1_vgpkk")]
+position = Vector2(1023, 167)
+
+[node name="kbd_enemy43" parent="." instance=ExtResource("1_vgpkk")]
+position = Vector2(970, 245)
+
+[node name="kbd_enemy44" parent="." instance=ExtResource("1_vgpkk")]
+position = Vector2(972, 145)
+
+[node name="kbd_enemy45" parent="." instance=ExtResource("1_vgpkk")]
+position = Vector2(922, 112)
+
+[node name="kbd_enemy46" parent="." instance=ExtResource("1_vgpkk")]
+position = Vector2(1005, 127)
+
+[node name="kbd_enemy47" parent="." instance=ExtResource("1_vgpkk")]
+position = Vector2(798, 117)
+
+[node name="kbd_enemy48" parent="." instance=ExtResource("1_vgpkk")]
+position = Vector2(851, 104)
+
+[node name="kbd_enemy49" parent="." instance=ExtResource("1_vgpkk")]
+position = Vector2(952, 29)
+
+[node name="plat" parent="." instance=ExtResource("2_vx8lv")]
+position = Vector2(781, 299)
+
+[node name="plat2" parent="." instance=ExtResource("2_vx8lv")]
+position = Vector2(550, 264)
+
+[node name="plat3" parent="." instance=ExtResource("2_vx8lv")]
+position = Vector2(723, 188)
+
+[node name="plat4" parent="." instance=ExtResource("2_vx8lv")]
+position = Vector2(863, 391)
+
+[node name="plat5" parent="." instance=ExtResource("2_vx8lv")]
+position = Vector2(641, 388)
+
+[node name="plat6" parent="." instance=ExtResource("2_vx8lv")]
+position = Vector2(785, 110)
+
+[node name="plat7" parent="." instance=ExtResource("2_vx8lv")]
+position = Vector2(457, 420)
+
+[node name="plat8" parent="." instance=ExtResource("2_vx8lv")]
+position = Vector2(584, 176)
+
+[node name="plat9" parent="." instance=ExtResource("2_vx8lv")]
+position = Vector2(396, 337)
+
+[node name="plat10" parent="." instance=ExtResource("2_vx8lv")]
+position = Vector2(962, 317)
