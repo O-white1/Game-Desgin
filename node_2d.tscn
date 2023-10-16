@@ -1,0 +1,38 @@
+[gd_scene load_steps=2 format=3 uid="uid://doanju1dgh2go"]
+
+[ext_resource type="PackedScene" uid="uid://d0gdhmg3bpexj" path="res://kbd_enemy.tscn" id="1_t301y"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PackedVector2Array(201, 194, 423, 493, 804, 747, 1394, 759, 1915, 477, 2115, 124, 2194, 201, 2004, 537, 1645, 794, 1099, 893, 658, 851, 356, 623, 217, 455)
+
+[node name="kbd_enemy" parent="." instance=ExtResource("1_t301y")]
+position = Vector2(883, 436)
+
+[node name="kbd_enemy2" parent="." instance=ExtResource("1_t301y")]
+position = Vector2(1147, 394)
+
+[node name="kbd_enemy3" parent="." instance=ExtResource("1_t301y")]
+position = Vector2(1112, 540)
+
+[node name="kbd_enemy4" parent="." instance=ExtResource("1_t301y")]
+position = Vector2(1131, 537)
+
+[node name="kbd_enemy5" parent="." instance=ExtResource("1_t301y")]
+position = Vector2(969, 277)
+
+[node name="kbd_enemy6" parent="." instance=ExtResource("1_t301y")]
+position = Vector2(1537, 207)
+
+[node name="kbd_enemy7" parent="." instance=ExtResource("1_t301y")]
+position = Vector2(1423, 277)
+
+[node name="kbd_enemy8" parent="." instance=ExtResource("1_t301y")]
+position = Vector2(1528, 474)
+
+[node name="kbd_enemy9" parent="." instance=ExtResource("1_t301y")]
+position = Vector2(1353, 499)
+
+[node name="kbd_enemy10" parent="." instance=ExtResource("1_t301y")]
+position = Vector2(759, 610)
