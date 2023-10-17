@@ -15,17 +15,17 @@ region = Rect2(128, 64, 32, 32)
 atlas = ExtResource("2_37lyq")
 region = Rect2(256, 64, 32, 32)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_lbsqx"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_txirv"]
 atlas = ExtResource("2_37lyq")
-region = Rect2(64, 64, 32, 32)
+region = Rect2(384, 64, 32, 32)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_geyjn"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_u6j54"]
 atlas = ExtResource("2_37lyq")
-region = Rect2(96, 64, 32, 32)
+region = Rect2(352, 64, 32, 32)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_oue3o"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_2pdgu"]
 atlas = ExtResource("2_37lyq")
-region = Rect2(224, 64, 32, 32)
+region = Rect2(320, 64, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_s1a28"]
 atlas = ExtResource("2_37lyq")
@@ -58,13 +58,13 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_lbsqx")
-}, {
-"duration": 5.0,
-"texture": SubResource("AtlasTexture_geyjn")
+"texture": SubResource("AtlasTexture_txirv")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_oue3o")
+"texture": SubResource("AtlasTexture_u6j54")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2pdgu")
 }],
 "loop": true,
 "name": &"jump",
@@ -113,5 +113,5 @@ zoom = Vector2(1.6, 1.6)
 position = Vector2(35, 12.25)
 scale = Vector2(1.53125, 1.82812)
 sprite_frames = SubResource("SpriteFrames_n6ynw")
-animation = &"walk"
-frame_progress = 0.474872
+animation = &"jump"
+frame_progress = 0.345231
