@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://b3gpm1bo5u4di"]
+
+[ext_resource type="PackedScene" uid="uid://btynvpllribrh" path="res://kbd_player.tscn" id="1_nabmv"]
+[ext_resource type="Script" path="res://StaticBody2D.gd" id="2_savqv"]
+
+[node name="playroom" type="Node2D"]
+
+[node name="kbd_player" parent="." instance=ExtResource("1_nabmv")]
+position = Vector2(320, 180)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+script = ExtResource("2_savqv")
+
+[node name="Polygon2D" type="Polygon2D" parent="StaticBody2D"]
+polygon = PackedVector2Array(254, 237, 229, 11, 108, 31, 119, 191, 80, 267, 98, 342, 302, 362, 375, 419, 660, 405, 928, 409, 1270, 409, 1623, 419, 1911, 402, 1978, 347, 2048, 171, 1925, 203, 1354, 200, 724, 240, 815, 229, 798, 175, 748, 185, 746, 230, 504, 240)
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D"]
+polygon = PackedVector2Array(251, 234, 383, 239, 525, 238, 646, 238, 749, 242, 749, 185, 798, 180, 803, 234, 933, 231, 1106, 220, 1378, 199, 1657, 199, 1920, 202, 2050, 171, 1974, 346, 1507, 364, 775, 368, 304, 364, 102, 341, 115, 193, 106, 31, 228, 13)
