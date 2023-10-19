@@ -90,6 +90,7 @@ polygon = PackedVector2Array(651, 510, 699, 505, 699, 422, 730, 342, 771, 329, 8
 [node name="kbd_exit" parent="." instance=ExtResource("4_s56xw")]
 position = Vector2(1734, 392)
 script = ExtResource("5_kut0q")
+next_level = "kbd_world_2"
 
 [node name="StaticBody2D2" type="StaticBody2D" parent="."]
 
