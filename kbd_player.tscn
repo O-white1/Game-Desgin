@@ -110,7 +110,6 @@ position = Vector2(36, 21)
 shape = SubResource("CapsuleShape2D_0reil")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-position = Vector2(35, 12.25)
-scale = Vector2(1.53125, 1.82812)
+position = Vector2(36, 12)
+scale = Vector2(2.28125, 2.13717)
 sprite_frames = SubResource("SpriteFrames_n6ynw")
-animation = &"walk"
