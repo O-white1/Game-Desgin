@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://btynvpllribrh"]
+[gd_scene load_steps=11 format=3 uid="uid://btynvpllribrh"]
 
 [ext_resource type="Script" path="res://kbd_player.gd" id="1_g72yi"]
 [ext_resource type="Texture2D" uid="uid://dv36dqosty36b" path="res://assets/characters.png" id="2_37lyq"]
@@ -7,25 +7,13 @@
 radius = 15.0
 height = 44.0
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_dlads"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_pus0x"]
 atlas = ExtResource("2_37lyq")
-region = Rect2(160, 64, 32, 32)
+region = Rect2(192, 0, 32, 32)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_sycw4"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_4a88b"]
 atlas = ExtResource("2_37lyq")
-region = Rect2(544, 64, 32, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_txirv"]
-atlas = ExtResource("2_37lyq")
-region = Rect2(384, 64, 32, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_u6j54"]
-atlas = ExtResource("2_37lyq")
-region = Rect2(352, 64, 32, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_2pdgu"]
-atlas = ExtResource("2_37lyq")
-region = Rect2(320, 64, 32, 32)
+region = Rect2(384, 0, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_s1a28"]
 atlas = ExtResource("2_37lyq")
@@ -47,25 +35,16 @@ region = Rect2(544, 64, 32, 32)
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_dlads")
+"texture": SubResource("AtlasTexture_pus0x")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_sycw4")
+"texture": SubResource("AtlasTexture_4a88b")
 }],
 "loop": true,
 "name": &"default",
-"speed": 3.0
+"speed": 1.0
 }, {
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_txirv")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_u6j54")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_2pdgu")
-}],
+"frames": [],
 "loop": true,
 "name": &"jump",
 "speed": 7.0
@@ -113,3 +92,5 @@ shape = SubResource("CapsuleShape2D_0reil")
 position = Vector2(36, 12)
 scale = Vector2(2.28125, 2.13717)
 sprite_frames = SubResource("SpriteFrames_n6ynw")
+animation = &"jump"
+frame_progress = 1.0
