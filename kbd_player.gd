@@ -45,7 +45,8 @@ func _physics_process(delta):
 		self.position.y -= JUMP_VELOCITY /2
 	if Input.is_action_just_pressed("toggle_gravity"):
 		gravity_on = not gravity_on
-
+	if Input.is_action_just_pressed("reset"):
+		get_tree().reload_current_scene()
 	
 
 
@@ -58,5 +59,6 @@ func update_animation(direction):
 		anim.flip_h = direction < 0 #mirror the sprite when going left
 	else:
 		anim.play("default")
+
 		
 
