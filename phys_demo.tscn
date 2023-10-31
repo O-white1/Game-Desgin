@@ -1,0 +1,109 @@
+[gd_scene load_steps=6 format=3 uid="uid://bq2h7502qvewf"]
+
+[ext_resource type="Script" path="res://phys_demo.gd" id="1_nlyc1"]
+[ext_resource type="PackedScene" uid="uid://cgo8p3auqeciw" path="res://phys_ball.tscn" id="1_qk3hn"]
+
+[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_g45hh"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5x4bm"]
+size = Vector2(1150, 47)
+
+[sub_resource type="Theme" id="Theme_pwje2"]
+
+[node name="phys_demo" type="Node2D"]
+script = ExtResource("1_nlyc1")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D"]
+position = Vector2(576.875, 634.375)
+scale = Vector2(1150.25, 46.75)
+texture = SubResource("PlaceholderTexture2D_g45hh")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(577, 634.5)
+shape = SubResource("RectangleShape2D_5x4bm")
+
+[node name="Panel" type="Panel" parent="."]
+offset_left = -1.0
+offset_top = -3.0
+offset_right = 313.0
+offset_bottom = 261.0
+
+[node name="Label" type="Label" parent="Panel"]
+layout_mode = 0
+offset_right = 61.0
+offset_bottom = 26.0
+text = "Gravity:"
+
+[node name="gravSlide" type="HSlider" parent="Panel"]
+layout_mode = 0
+offset_left = 95.0
+offset_top = 8.0
+offset_right = 252.0
+offset_bottom = 24.0
+
+[node name="Button" type="Button" parent="Panel"]
+layout_mode = 0
+offset_left = 1.0
+offset_top = 25.0
+offset_right = 314.0
+offset_bottom = 68.0
+text = "Apply Central Force
+"
+
+[node name="Label2" type="Label" parent="Panel"]
+layout_mode = 0
+offset_left = 4.0
+offset_top = 78.0
+offset_right = 113.0
+offset_bottom = 101.0
+text = "Inertia:"
+
+[node name="Label3" type="Label" parent="Panel"]
+layout_mode = 0
+offset_left = 5.0
+offset_top = 128.0
+offset_right = 81.0
+offset_bottom = 154.0
+text = "Velocity:
+"
+
+[node name="txtI" type="LineEdit" parent="Panel"]
+layout_mode = 0
+offset_left = 88.0
+offset_top = 77.0
+offset_right = 298.0
+offset_bottom = 108.0
+theme = SubResource("Theme_pwje2")
+
+[node name="txtVx" type="LineEdit" parent="Panel"]
+layout_mode = 0
+offset_left = 87.0
+offset_top = 127.0
+offset_right = 182.0
+offset_bottom = 158.0
+theme = SubResource("Theme_pwje2")
+
+[node name="txtVy" type="LineEdit" parent="Panel"]
+layout_mode = 0
+offset_left = 203.0
+offset_top = 128.0
+offset_right = 299.0
+offset_bottom = 159.0
+theme = SubResource("Theme_pwje2")
+
+[node name="Button2" type="Button" parent="Panel"]
+layout_mode = 0
+offset_left = 22.0
+offset_top = 166.0
+offset_right = 291.0
+offset_bottom = 211.0
+text = "Apply"
+
+[node name="phys_ball" parent="." instance=ExtResource("1_qk3hn")]
+position = Vector2(390, -43)
+
+[connection signal="value_changed" from="Panel/gravSlide" to="." method="_on_grav_slide_value_changed"]
+[connection signal="pressed" from="Panel/Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Panel/Button2" to="." method="_on_button_2_pressed"]
