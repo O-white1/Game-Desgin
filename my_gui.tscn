@@ -1,0 +1,41 @@
+[gd_scene load_steps=3 format=3 uid="uid://blfup2hm4lrgq"]
+
+[ext_resource type="Script" path="res://My_gui.gd" id="1_p73y2"]
+
+[sub_resource type="Theme" id="Theme_exp2n"]
+
+[node name="My_gui" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_p73y2")
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 0
+offset_right = 1152.0
+offset_bottom = 648.0
+
+[node name="resume" type="Button" parent="Panel"]
+layout_mode = 0
+offset_left = 283.0
+offset_top = 121.0
+offset_right = 821.0
+offset_bottom = 249.0
+theme = SubResource("Theme_exp2n")
+text = "Resume
+"
+
+[node name="quit" type="Button" parent="Panel"]
+layout_mode = 0
+offset_left = 289.0
+offset_top = 356.0
+offset_right = 824.0
+offset_bottom = 484.0
+text = "Quit
+"
+
+[connection signal="pressed" from="Panel/resume" to="." method="_on_resume_pressed"]
+[connection signal="pressed" from="Panel/quit" to="." method="_on_quit_pressed"]
