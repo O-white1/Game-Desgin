@@ -1,0 +1,22 @@
+[gd_scene load_steps=3 format=3 uid="uid://cogbqrhbxiwa3"]
+
+[ext_resource type="Script" path="res://player_hud.gd" id="1_mawak"]
+[ext_resource type="Texture2D" uid="uid://d2p25aspb4e4g" path="res://assets/objects.png" id="1_orllk"]
+
+[node name="PlayerHUD" type="CanvasLayer"]
+script = ExtResource("1_mawak")
+
+[node name="PlayerHealth" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 512.0
+offset_bottom = 128.0
+
+[node name="Hearts" type="Sprite2D" parent="PlayerHealth"]
+position = Vector2(32, 32)
+scale = Vector2(4, 4)
+texture = ExtResource("1_orllk")
+hframes = 33
+vframes = 20
+frame = 8
+metadata/_edit_group_ = true

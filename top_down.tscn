@@ -1,9 +1,10 @@
-[gd_scene load_steps=21 format=3 uid="uid://cnkwbm0ea7ndk"]
+[gd_scene load_steps=22 format=3 uid="uid://cnkwbm0ea7ndk"]
 
 [ext_resource type="Script" path="res://TDplayer.gd" id="1_grajs"]
 [ext_resource type="Texture2D" uid="uid://bk4hy7j2lbp6p" path="res://icon.svg" id="2_pyc62"]
 [ext_resource type="Texture2D" uid="uid://cbg6wswwt007a" path="res://assets/character.png" id="3_i1t8n"]
 [ext_resource type="Texture2D" uid="uid://uxm8wn2gvlx8" path="res://assets/Overworld.png" id="4_yjqnw"]
+[ext_resource type="PackedScene" uid="uid://cogbqrhbxiwa3" path="res://player_hud.tscn" id="5_id62b"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_p1uxh"]
 radius = 7.5
@@ -112,7 +113,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"walk_side",
-"speed": 5.0
+"speed": 6.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -1186,7 +1187,7 @@ sources/0 = SubResource("TileSetAtlasSource_xatu6")
 
 [node name="TopDown" type="Node2D"]
 
-[node name="TDplayer" type="CharacterBody2D" parent="."]
+[node name="TDplayer" type="CharacterBody2D" parent="." groups=["Player"]]
 z_index = 3
 script = ExtResource("1_grajs")
 
@@ -1204,7 +1205,7 @@ shape = SubResource("CapsuleShape2D_p1uxh")
 z_index = 1
 position = Vector2(-2.98023e-08, 0)
 sprite_frames = SubResource("SpriteFrames_x38yw")
-animation = &"idle_side"
+animation = &"walk_side"
 
 [node name="Camera2D" type="Camera2D" parent="TDplayer"]
 zoom = Vector2(4, 4)
@@ -1221,3 +1222,6 @@ layer_1/y_sort_enabled = false
 layer_1/y_sort_origin = 0
 layer_1/z_index = 0
 layer_1/tile_data = PackedInt32Array(-65532, 1441792, 9)
+
+[node name="PlayerHUD" parent="." groups=["HUD"] instance=ExtResource("5_id62b")]
+visible = false
