@@ -1,13 +1,15 @@
 extends CharacterBody2D
 
 
-const SPEED = 130 # was 80
+const SPEED = 100 # was 80
 # const JUMP_VELOCITY = -400.0
 const MAX_POSSALBE_HEALTH = 400
+
 
 @export var data = {
 	"max_health": 60.0,  # 20hp per heart, 5 per fraction
 	"health": 60.0, 	 # min 60 max 400
+	"money": 0.0
 }
 
 
@@ -45,6 +47,7 @@ func _physics_process(delta):
 	if Input.is_action_just_pressed("ui_cancel"):
 		menu_instance.show()
 		get_tree().paused = true
+		
 		
 	
 func update_animation(direction):

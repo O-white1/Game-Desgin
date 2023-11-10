@@ -1,7 +1,10 @@
-[gd_scene load_steps=3 format=3 uid="uid://cogbqrhbxiwa3"]
+[gd_scene load_steps=4 format=3 uid="uid://cogbqrhbxiwa3"]
 
 [ext_resource type="Script" path="res://player_hud.gd" id="1_mawak"]
 [ext_resource type="Texture2D" uid="uid://d2p25aspb4e4g" path="res://assets/objects.png" id="1_orllk"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_nt41t"]
+font_size = 20
 
 [node name="PlayerHUD" type="CanvasLayer"]
 script = ExtResource("1_mawak")
@@ -20,3 +23,27 @@ hframes = 33
 vframes = 20
 frame = 8
 metadata/_edit_group_ = true
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_top = 64.0
+offset_right = 192.0
+offset_bottom = 128.0
+
+[node name="Sprite2D" type="Sprite2D" parent="Control"]
+clip_children = 2
+position = Vector2(16, 24)
+scale = Vector2(1.61538, 1.80952)
+texture = ExtResource("1_orllk")
+hframes = 33
+vframes = 20
+frame = 132
+
+[node name="Money" type="Label" parent="Control"]
+layout_mode = 0
+offset_left = 24.0
+offset_top = 16.0
+offset_right = 80.0
+offset_bottom = 56.0
+label_settings = SubResource("LabelSettings_nt41t")
