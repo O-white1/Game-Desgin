@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://de67hknt0owid"]
+
+[ext_resource type="PackedScene" uid="uid://cogbqrhbxiwa3" path="res://player_hud.tscn" id="1_7lkyj"]
+[ext_resource type="PackedScene" uid="uid://brbwc15nm7ha3" path="res://t_dplayer.tscn" id="2_pdlvm"]
+
+[node name="top_down2" type="Node2D"]
+
+[node name="TDplayer" parent="." instance=ExtResource("2_pdlvm")]
+
+[node name="PlayerHUD" parent="." groups=["HUD"] instance=ExtResource("1_7lkyj")]
