@@ -1,10 +1,11 @@
-[gd_scene load_steps=9 format=3 uid="uid://cnkwbm0ea7ndk"]
+[gd_scene load_steps=10 format=3 uid="uid://cnkwbm0ea7ndk"]
 
 [ext_resource type="PackedScene" uid="uid://brbwc15nm7ha3" path="res://t_dplayer.tscn" id="1_lo56a"]
 [ext_resource type="PackedScene" uid="uid://dul6iv67bxhsu" path="res://cangelvl.tscn" id="4_45bl6"]
 [ext_resource type="Texture2D" uid="uid://uxm8wn2gvlx8" path="res://assets/Overworld.png" id="4_yjqnw"]
 [ext_resource type="PackedScene" uid="uid://cogbqrhbxiwa3" path="res://player_hud.tscn" id="5_id62b"]
 [ext_resource type="Script" path="res://cangelvl.gd" id="5_rcxvu"]
+[ext_resource type="PackedScene" uid="uid://bqy8ilqxatm13" path="res://entities/base_item.tscn" id="6_2swhg"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_xatu6"]
 texture = ExtResource("4_yjqnw")
@@ -1070,6 +1071,7 @@ radius = 24.0
 [node name="TopDown" type="Node2D"]
 
 [node name="TDplayer" parent="." instance=ExtResource("1_lo56a")]
+z_index = 1
 
 [node name="world" type="TileMap" parent="."]
 z_index = 1
@@ -1093,5 +1095,17 @@ visible = false
 
 [node name="cangelvl" parent="." instance=ExtResource("4_45bl6")]
 script = ExtResource("5_rcxvu")
+
+[node name="BaseItem" parent="." instance=ExtResource("6_2swhg")]
+z_index = 1
+position = Vector2(-36, 9)
+
+[node name="BaseItem2" parent="." instance=ExtResource("6_2swhg")]
+z_index = 1
+position = Vector2(61, 47)
+
+[node name="BaseItem3" parent="." instance=ExtResource("6_2swhg")]
+z_index = 1
+position = Vector2(-11, 56)
 
 [connection signal="body_entered" from="cangelvl" to="cangelvl" method="_on_body_entered"]
