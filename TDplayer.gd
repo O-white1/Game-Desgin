@@ -8,7 +8,7 @@ const MAX_POSSALBE_HEALTH = 400
 
 @export var data = {
 	"max_health": 60.0,  # 20hp per heart, 5 per fraction
-	"health": 60.0, 	 # min 60 max 400
+	"health": 40.0, 	 # min 60 max 400
 	"money": 0.0
 }
 
@@ -23,6 +23,14 @@ var menu_instance = null
 
 func pickup_money(value):
 	data.money += value
+	
+func pickup_health(value):
+	data.heath += value
+	data.health = clamp(data.health, 0, data.max_health)
+	
+	
+	
+	
 
 func _ready():
 	p_HUD.show()

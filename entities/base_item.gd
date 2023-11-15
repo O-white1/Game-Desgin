@@ -6,7 +6,9 @@ var flicker_interval = 0.1
 var current_time = 0.0
 var time_to_despawn = 13.0
 
-func _ready(): $AnimatedSprite2D.play()
+func _ready(): 
+	$AnimatedSprite2D.play()
+	
 
 func remove():
 	value = 0
