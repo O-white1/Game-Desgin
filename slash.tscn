@@ -8,5 +8,5 @@ script = ExtResource("1_gppw5")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
+[node name="Sprite2D" type="Sprite2D" parent="." groups=["entities"]]
 texture = ExtResource("2_m1go6")
