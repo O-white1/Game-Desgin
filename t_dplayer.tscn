@@ -1,8 +1,9 @@
-[gd_scene load_steps=45 format=3 uid="uid://brbwc15nm7ha3"]
+[gd_scene load_steps=49 format=3 uid="uid://brbwc15nm7ha3"]
 
 [ext_resource type="Script" path="res://TDplayer.gd" id="1_6ml8v"]
 [ext_resource type="Texture2D" uid="uid://bk4hy7j2lbp6p" path="res://icon.svg" id="2_xvtx2"]
 [ext_resource type="Texture2D" uid="uid://cbg6wswwt007a" path="res://assets/character.png" id="3_nc3op"]
+[ext_resource type="Texture2D" uid="uid://cytofbkedshja" path="res://assets/ball.png" id="4_aelb3"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_p1uxh"]
 radius = 7.5
@@ -31,6 +32,18 @@ region = Rect2(32, 64, 16, 32)
 [sub_resource type="AtlasTexture" id="AtlasTexture_dqq1d"]
 atlas = ExtResource("3_nc3op")
 region = Rect2(80, 64, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vs6vt"]
+atlas = ExtResource("4_aelb3")
+region = Rect2(0, 0, 74, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_opko4"]
+atlas = ExtResource("4_aelb3")
+region = Rect2(74, 288, 74, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kgwly"]
+atlas = ExtResource("4_aelb3")
+region = Rect2(0, 288, 74, 96)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_gc8kw"]
 atlas = ExtResource("3_nc3op")
@@ -194,10 +207,19 @@ animations = [{
 }, {
 "duration": 2.0,
 "texture": SubResource("AtlasTexture_dqq1d")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vs6vt")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_opko4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kgwly")
 }],
 "loop": true,
 "name": &"idle_up",
-"speed": 4.0
+"speed": 7.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -360,9 +382,8 @@ shape = SubResource("CapsuleShape2D_p1uxh")
 z_index = 1
 position = Vector2(-2.98023e-08, 0)
 sprite_frames = SubResource("SpriteFrames_x38yw")
-animation = &"swipe_charge"
-frame = 11
-frame_progress = 1.0
+animation = &"idle_up"
+frame_progress = 0.325066
 
 [node name="Camera2D" type="Camera2D" parent="."]
 zoom = Vector2(4, 4)

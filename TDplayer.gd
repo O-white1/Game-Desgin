@@ -50,7 +50,7 @@ func pickup_money(value):
 	data.money += value
 	
 func pickup_health(value):
-	data.heath += value
+	data.health += value
 	data.health = clamp(data.health, 0, data.max_health)
 	
 	
