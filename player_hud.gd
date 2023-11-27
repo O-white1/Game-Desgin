@@ -32,6 +32,7 @@ func _process(delta):
 	var p_health = player.data.health
 	var full_hearts = floor(p_health / 20)
 	var remainder = int(p_health) % 20
+	$Money.text = player.data.money
 	
 	
 	for heart in hearts.get_children():
