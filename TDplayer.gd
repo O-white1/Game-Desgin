@@ -23,7 +23,7 @@ var attack_direction = Vector2.DOWN
 var animation_lock = 0
 var slash_scene = preload("res://slash.tscn")
 var damage_lock = 0.0
-var cahrge_time = 2.5
+var charge_time = 2.5
 var charge_start_time = 0.0
 
 var menu_scene = preload("res://my_gui.tscn")
@@ -57,7 +57,7 @@ func charged_attack():
 	for i in range(9):
 		var angle = -attack_direction.angle() + (i-4) * PI / 4;
 		var direction = Vector2(cos(angle), sin(angle))
-		var slash = slash_scene.intantiate()
+		var slash = slash_scene.instantiate()
 		slash.position - direction * 20.0
 		slash.rotation = Vector2().angle_to_point(-direction)
 		slash.damage *= 1.75
@@ -88,7 +88,7 @@ func _ready():
 
 func _physics_process(delta):
 	animation_lock = max(animation_lock-delta, 0.0)
-	
+	damage_lock = max(damage_lock-delta, 0.0)
 	if animation_lock == 0 and data.state != STATES.DEAD:
 		
 		if data.state != STATES.CHARGING:
@@ -113,6 +113,16 @@ func _physics_process(delta):
 	if data.state != STATES.DEAD:
 		if Input.is_action_just_pressed("ui_accept"):
 			attack()
+			charge_start_time = Time.get_time_dict_from_system().second
+			data.state = STATES.CHARGING
+		if Input.is_action_just_released("ui_accept"):
+			var ctime = Time.get_time_dict_from_system().second
+			var charge_dur = ctime - charge_start_time
+			if charge_dur >= charge_time and data.state == STATES.CHARGING:
+				charged_attack()
+			else:
+				data.states = STATES.IDLE
+			
 	
 	if Input.is_action_just_pressed("ui_cancel"):
 		menu_instance.show()
