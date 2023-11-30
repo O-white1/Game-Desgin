@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://cnkwbm0ea7ndk"]
+[gd_scene load_steps=12 format=3 uid="uid://cnkwbm0ea7ndk"]
 
 [ext_resource type="PackedScene" uid="uid://brbwc15nm7ha3" path="res://t_dplayer.tscn" id="1_lo56a"]
 [ext_resource type="PackedScene" uid="uid://dul6iv67bxhsu" path="res://cangelvl.tscn" id="4_45bl6"]
@@ -7,6 +7,7 @@
 [ext_resource type="Script" path="res://cangelvl.gd" id="5_rcxvu"]
 [ext_resource type="PackedScene" uid="uid://bqy8ilqxatm13" path="res://entities/base_item.tscn" id="6_2swhg"]
 [ext_resource type="PackedScene" uid="uid://cp450aftuwhko" path="res://entities/mini_heart.tscn" id="7_02alv"]
+[ext_resource type="PackedScene" uid="uid://b2jr010lqt33y" path="res://td_enemy.tscn" id="8_j3rvn"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_xatu6"]
 texture = ExtResource("4_yjqnw")
@@ -1070,6 +1071,7 @@ sources/0 = SubResource("TileSetAtlasSource_xatu6")
 radius = 24.0
 
 [node name="TopDown" type="Node2D"]
+position = Vector2(-1, 0)
 
 [node name="TDplayer" parent="." instance=ExtResource("1_lo56a")]
 z_index = 1
@@ -1112,5 +1114,17 @@ position = Vector2(-11, 56)
 [node name="mini_heart" parent="." instance=ExtResource("7_02alv")]
 z_index = 1
 position = Vector2(-76, 43)
+
+[node name="td_enemy" parent="." instance=ExtResource("8_j3rvn")]
+z_index = 1
+position = Vector2(-121, -37)
+
+[node name="td_enemy2" parent="." instance=ExtResource("8_j3rvn")]
+z_index = 1
+position = Vector2(149, -40)
+
+[node name="td_enemy3" parent="." instance=ExtResource("8_j3rvn")]
+z_index = 1
+position = Vector2(-99, 98)
 
 [connection signal="body_entered" from="cangelvl" to="cangelvl" method="_on_body_entered"]
