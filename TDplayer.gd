@@ -37,6 +37,7 @@ func get_diretion_name():
 	]
 	
 func attack():
+	$AudioStreamPlayer2D.play("res://assets/sounds/OnlineSounds.wav")
 	data.state = STATES.ATTACKING
 	if get_diretion_name() == "left":
 		$AnimatedSprite2D.flip_h = 0
