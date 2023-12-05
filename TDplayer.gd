@@ -28,8 +28,11 @@ var charge_start_time = 0.0
 
 var menu_scene = preload("res://my_gui.tscn")
 var menu_instance = null
+var attack_sound = preload("res://assets/sounds/slash.wav")
+
 
 @onready var p_HUD = get_tree().get_first_node_in_group("HUD")
+@onready var aud_player = $AudioStreamPlayer2D
 
 func get_diretion_name():
 	return ["right", "down", "left", "up"] [
@@ -37,7 +40,7 @@ func get_diretion_name():
 	]
 	
 func attack():
-	$AudioStreamPlayer2D.play("res://assets/sounds/OnlineSounds.wav")
+	$AudioStreamPlayer2D.play("res://assets/sounds/slash.wav")
 	data.state = STATES.ATTACKING
 	if get_diretion_name() == "left":
 		$AnimatedSprite2D.flip_h = 0
@@ -47,6 +50,7 @@ func attack():
 	slash.position = attack_direction * 20.0
 	slash.rotation = Vector2().angle_to_point(-attack_direction)
 	add_child(slash)
+	aud_player.stream = attack_sound
 	animation_lock = 0.20
 	
 func charged_attack():
