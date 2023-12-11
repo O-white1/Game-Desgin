@@ -44,6 +44,7 @@ var drops = ["drop_coin", "drop_heart"]
 var coin_scene = preload("res://entities/coin.tscn")
 var heart_scene = preload("res://entities/mini_heart.tscn")
 var deathsound = preload("res://assets/sounds/enemydeath.wav")
+var damage_shader = preload("res://assets/shaders/take_damage.tres")
 
 
 func  vec2_offset():
@@ -86,6 +87,9 @@ func take_damage(dmg, attacker=null):
 		HEALTH -= DMG
 		damage_lock = 0.2
 		animation_lock = 0.2
+		var dmg_intensity = clamp(1.0-((HEALTH+0.01)/MAXHP), 0.1, 0.8)
+		$AnimatedSprite2D.material = damage_shader.duplicate()
+		$AnimatedSprite2D.material.set_shader_parameter("intensity", dmg_intensity)
 		
 		if HEALTH <= 0:
 			drop_item()
@@ -105,6 +109,7 @@ func _physics_process(delta):
 		raycastl.target_position = raydir.rotated(deg_to_rad(45)).normalized() * vision_distance
 	if animation_lock == 0.0:
 		if AI_STATE == STATES.DAMAGED:
+			$AnimatedSprite2D.material = null
 			AI_STATE = STATES.IDLE
 			recovered.emit()
 			

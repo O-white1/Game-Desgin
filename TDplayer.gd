@@ -29,7 +29,7 @@ var charge_start_time = 0.0
 var menu_scene = preload("res://my_gui.tscn")
 var menu_instance = null
 var attack_sound = preload("res://assets/sounds/slash.wav")
-
+var damage_shader = preload("res://assets/shaders/take_damage.tres")
 
 @onready var p_HUD = get_tree().get_first_node_in_group("HUD")
 @onready var aud_player = $AudioStreamPlayer2D
@@ -92,7 +92,10 @@ func _ready():
 	menu_instance.hide()
 	
 func take_damage(dmg):
-	pass
+	if damage_lock == 0.0:
+		data.health -= dmg
+		$AnimatedSprite2D.material = damage_shader.duplicate()
+		$AnimatedSprite2D.material.set_parameter("intensity", 0.5)
 
 func _physics_process(delta):
 	animation_lock = max(animation_lock-delta, 0.0)
