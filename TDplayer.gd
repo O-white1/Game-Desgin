@@ -21,11 +21,10 @@ var inertia = Vector2()
 var look_direction = Vector2.DOWN
 var attack_direction = Vector2.DOWN
 var animation_lock = 0
-var slash_scene = preload("res://slash.tscn")
 var damage_lock = 0.0
 var charge_time = 2.5
 var charge_start_time = 0.0
-
+var slash_scene = preload("res://slash.tscn")
 var menu_scene = preload("res://my_gui.tscn")
 var menu_instance = null
 var attack_sound = preload("res://assets/sounds/slash.wav")
